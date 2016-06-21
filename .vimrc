@@ -50,8 +50,7 @@ au BufNewFile,BufRead *.h,*.c set shiftwidth=4
 au BufNewFile,BufRead *.h,*.c set noexpandtab
 
 
-
-au BufNewFile,BufRead *.js, *.html, *.css
-	\ set tabstop=2 
-	\ set softtabstop=2 
-	\ set shiftwidth=2 
+" Web dev stuff
+au BufNewFile,BufRead *.js,*.html,*.css set tabstop=2 
+au BufNewFile,BufRead *.js,*.html,*.css set softtabstop=2 
+au BufNewFile,BufRead *.js,*.html,*.css set shiftwidth=2 
