@@ -3,7 +3,8 @@ filetype off                  " required
 set encoding=utf-8
 
 let python_highlight_all=1
-syntax on
+syntax enable
+set background=dark
 
 set nu
 
@@ -33,17 +34,24 @@ filetype plugin indent on    " required
 
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
+" Python Stuff
+au BufNewFile,BufRead *.py set tabstop=4 
+au BufNewFile,BufRead *.py set softtabstop=4 
+au BufNewFile,BufRead *.py set shiftwidth=4 
+au BufNewFile,BufRead *.py set textwidth=79 
+au BufNewFile,BufRead *.py set expandtab 
+au BufNewFile,BufRead *.py set autoindent 
+au BufNewFile,BufRead *.py set fileformat=unix 
+
+" C Stuff
+au BufNewFile,BufRead *.h,*.c set tabstop=4
+au BufNewFile,BufRead *.h,*.c set softtabstop=4
+au BufNewFile,BufRead *.h,*.c set shiftwidth=4
+au BufNewFile,BufRead *.h,*.c set noexpandtab
+
+
 
 au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
-    \ set shiftwidth=2 |
-
+	\ set tabstop=2 
+	\ set softtabstop=2 
+	\ set shiftwidth=2 
